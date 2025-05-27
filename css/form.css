@@ -1,0 +1,304 @@
+/* =========================== 
+            FOOTER CSS
+    ==========================
+        Styles for the Form
+    =========================*/
+
+    .form {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+       
+    .form-group {
+        margin-bottom: 20px;
+        display: flex;        
+        align-items: center;
+        position: relative;
+    }
+
+    label {        
+        font-weight: 600;
+        width: 170px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1rem;
+    }
+
+    input {
+        flex: 1;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        transition: border 0.3s;
+        position: relative;
+    }
+
+    input:focus {
+        border-color: #288fd4;
+        outline: none;
+    }
+
+    /*  Submit button  */
+
+    .submit-button {
+        margin-top: 5px;
+        background: #3498db;
+        font-weight: 600;
+        color: #fff;
+        padding: 13px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1erm;
+        width: 100%;
+        transition: background 0.3s;
+    }
+    .submit-button:hover {
+        background: #2980b9;
+    }
+    
+    
+    /*  Radio Buttons  */
+
+    .radio-group {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .radio-label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+    }
+    
+    .radio-custom {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border: 2px solid var(--blue);
+        border-radius: 50%;
+        position: relative;
+    }
+    
+    .radio-label input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+    }
+    
+    .radio-label input[type="radio"]:checked+.radio-custom::after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: #3498db;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .radio-label input[type="radio"]:focus+.radio-custom {
+        box-shadow: 0 0 3px #3498db;
+    }
+
+
+    /*  Passwords */
+
+    .password-field {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }    
+    
+    .password-requirements {
+        font-size: 13px;
+        color: #7f8c8d;
+        margin-top: 5px;
+        margin-bottom: -5px;
+        order: 2; 
+    }
+    
+    #password-error {
+        order: 3; 
+    }
+
+
+
+    /*  SUCCESS/ERROR MESSAGES  */
+
+    .form-message {
+        display: block;   
+        width: 100%;
+        padding: 14px 40px;     
+        font-size: .9rem;
+        text-align: center;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 8px;
+        margin: 25px auto 15px auto;
+        font-weight: 600;
+    }
+
+    .success {
+        color: #063E09;
+        background-color: #CBEDBB;
+        border-color: #77BC7F;
+    }
+
+    .error {
+        color: #5A0A0A;
+        background-color: #FFD8D8;
+        border-color: #FF5656;
+    }
+
+    .blue {
+        color: #133B56;
+        background-color: #BFE0EF;
+        border-color: #779CBC;
+    }
+
+
+    /*   Error fields  */
+
+    .error-field {
+        border-color: #e74c3c !important;
+        background-color: #fde8e8;
+       
+    }
+
+    .error-field-border {
+        border-color: #e74c3c !important;
+        background-color: #fffafa;
+    }
+
+    .error-field-text {
+        display: block;   
+        color: #ba3122;
+        font-size: 0.9rem;
+        position: absolute;
+        left: 170px; 
+        top: 95%; 
+        margin-top: 2px;
+        width: calc(100% - 170px);           
+    }    
+
+    .password-field .error-field-text {        
+        top: 101%;
+    }
+
+    .form-group-with-error {        
+        margin-bottom: 30px; 
+    }
+
+    .form-group-with-error-password {
+        margin-bottom: 35px; 
+    }
+
+    /*  password checkmark */
+    .checkmark {
+        position: absolute;
+        right: 37px;
+        transform: translateY(7%);
+        color: #4CAF50;
+        opacity: 0;
+        transition: opacity 0.1s;
+        font-size: 1.2rem;
+        background-color: #FFF;
+        padding: 4px 14px;  
+        font-weight: bold;     
+    }
+
+    .checkmark.visible {
+        opacity: 1;
+    }
+    
+    /*   show/hide password */
+
+    .password-toggle {
+        position: absolute;
+        right: 1px;
+        cursor: pointer;
+        padding: 8px 12px;
+        background-color: #efefef;
+        transform: translateY(1px);
+        
+    }
+    
+    .password-toggle i {
+        color: #686868;
+        font-size: .9rem;
+
+    } 
+    .password-toggle:hover {
+        background-color: #f2f2f2;
+    }
+
+    /*  Submit button - spinning when loading */
+    @keyframes spin {
+        from { transform: translateY(-50%) rotate(0deg); }
+        to { transform: translateY(-50%) rotate(360deg); }
+    }
+
+    #message.loading {
+        /* position: relative; */
+        margin: 40px auto 0px auto;        
+        pointer-events: none;
+        text-align: center;
+        width: 32px;
+        height: 32px;
+        border: 4px solid var(--blue);
+        border-radius: 50%;
+        border-top-color: transparent;
+        animation: spin 0.8s linear infinite;        
+    }
+
+    /* =========================== */
+    /*        RESPONSIVENESS      */
+    /* =========================== */
+
+    @media screen and (max-width: 760px) {
+
+        .form-group {
+            flex-direction: column; 
+            text-align: center;    
+        }
+    
+        label {    
+            width: 100%;                    
+        }
+    
+        input {
+            width: 100%;   
+            text-align: center;        
+        }   
+
+        .radio-group {
+            margin-top: 10px;
+         }
+
+         .error-field-text {
+            position: relative;
+            text-align: center;
+            width: 100%;
+            left: 0;
+            top: 0;
+         }
+
+         .radio-label input[type="radio"] {
+            position: relative;
+         }
+
+         .form-group-with-error {        
+            margin-bottom: 8px; 
+        }
+    
+        .form-group-with-error-password {
+            margin-bottom: 8px; 
+        }
+
+        .password-field {
+            width: 100%;
+        }
+
+    }

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="description" content="Secure and modern user registration form using HTML, CSS, JavaScript, PHP, and MySQL. Features real-time front-end and back-end validation, password strength requirements, international phone number input, accessibility support, responsive design, normalized database structure, and secure data storage following best database practices.">
+    <meta name="keywords" content="registration, form, user, secure, HTML, JS, JavaScript, PHP, MySQL, signup, sign up, create account, responsive, accessibility, password strength, validation, international phone, database, web development, frontend, backend, modern, best practices, security, mobile friendly, user experience, authentication, account management, data protection, GDPR, encryption, UI, UX, mobile optimization, cross-browser, email verification, input masking, usability, registration system, web app, software development, developer, web design, frontend development, backend development, web application, user interface, user experience, responsive design, mobile friendly, cross-browser compatibility, web security, data validation, form validation, password management, user authentication, account creation, user profile">
+    <meta name="author" content="Gabriela Waisman">
+
+    <title>Registration Form</title>
+
+    <!-- FavIcon -->
+    <link rel="shortcut icon" href="images/logo_gaby_icon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./libraries/inttl-tel-input/css/intlTelInput.css">    
+
+    <!-- Fonts  -->
+    <link rel="stylesheet" id="font-awesome-css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.2.0" type="text/css" 
+    media="all">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+     <noscript>
+        <p class="noscript-warning">JavaScript is required for this page to function properly. Please enable JavaScript in your browser settings.</p>
+    </noscript>
+
+    <header>
+        <!-- HEADER TOP LINE CONTACT INFO  -->
+         <div class="header-top-container">            
+            <div class="header-top width-container">
+                <div class="header-top-contactData">
+                    <p>
+                        <a href="https://maps.app.goo.gl/YC2ey91bx3Axqy7W7" target="_blank">
+                            <i class="fa fa-map-marker"></i>
+                            Toronto, Ontario, Canada
+                        </a>
+                    <!-- Telephone  -->
+                    <!-- <p><i class="fa fa-phone"></i>
+                        <a href="">
+                        </a>
+                    </p>                     -->
+                    
+                    <!-- Email  -->
+                    <!-- <p><i class="fa fa-envelope-o"></i>
+                        <a href="mailto:developer@gabywaisman.com">developer@gabywaisman.com</a>
+                    </p> -->
+                </div>
+                <div>
+                    <ul class="header-top-socialNetworks">
+                        <li><a href="https://www.linkedin.com/in/gabriela-waisman/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://github.com/Wisegirlie" target="_blank"><i class="fa fa-github"></i></a></li>
+                        <li><a href="https://www.gabywaisman.com/" target="_blank"><i class="fa fa-link"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main  -->
+    <main>
+        <!-- HEADER LOGO AND MENU  -->
+        <!-- <div class="header-logo-menu-container width-container">
+            <div class="header-logo-container">
+                <a href="https://www.gabywaisman.com/" target="_blank">
+                    <img src="/images/logo_gaby_bolder.png" alt="Gabriela Waisman Logo" class="header-logo-img">
+                </a>
+             </div>
+        </div> -->
+        <div class="main-content width-container">
+            <div class="main-inner-container">
+                <h1 class="main-title">
+                    User registration
+                </h1>
+                <h2 class="main-sub-title">                    
+                    Your are welcome to join us. <br>
+                    Secure HTML / JS / PHP / MySQL user registration form.
+                </h2>
+                <!--  FORM  -->
+                <form id="form" class="form" method="POST">
+                    <div class="form-group">
+
+                        <!-- Account type -->
+                        <label>Account Type</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="account_type" value="individual" checked >
+                                <span class="radio-custom"></span>
+                                Individual
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="account_type" value="company"  >
+                                <span class="radio-custom"></span>
+                                Company
+                            </label>
+                        </div>
+                    </div>
+    
+                    <!-- username -->
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required autocomplete="username">
+                        <div id="username-error" class="error-field-text"></div>
+                    </div>
+
+                    <!-- company name -->
+                    <div class="form-group" id="company_name" style="display: none;">
+                        <label id="company_name_label" for="company_name" >Company Name</label>
+                        <input type="text" id="company_name-input" name="company_name" autocomplete="organization">
+                        <div id="company_name-error" class="error-field-text"></div>
+                    </div>
+    
+                    <!-- full name -->
+                    <div class="form-group">
+                        <label id="full_name_label" for="full_name" >Full Name</label>
+                        <input type="text" id="full_name" name="full_name" required autocomplete="name">
+                        <div id="full_name-error" class="error-field-text"></div>
+                    </div>
+                    
+                    <!-- contact title -->
+                    <div class="form-group" id="contact_title" style="display: none;">
+                        <label for="contact_title">Contact Title</label>
+                        <input type="text" id="contact_title-input" name="contact_title" autocomplete="organization-title">
+                    </div>
+    
+                    <!-- email -->
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required autocomplete="email">
+                        <div id="email-error" class="error-field-text"></div>
+                    </div>
+    
+                    <!-- password -->
+                    <div class="form-group">
+                        <label for="password" >Password</label>
+                        <div class="password-field">
+                            <input type="password" id="password" name="password" required autocomplete="new-password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$">
+                            <span class="checkmark">✓</span>
+                            <span class="password-toggle" onclick="togglePassword()" aria-label="Show password" role="button" tabindex="0">
+                                <i class="fa fa-eye"></i>
+                            </span>
+                            <div class="password-requirements">
+                                Minimum 8 characters, at least one uppercase letter, one
+                                lowercase letter, one number, and one special character
+                            </div>
+                            <div id="password-error" class="error-field-text"></div>
+                        </div>
+                    </div>
+    
+                    <!-- repeat password -->
+                    <div class="form-group">
+                        <label for="repeat_password">Repeat Password</label>
+                        <div class="password-field">                    
+                            <input type="password" id="repeat_password" name="repeat_password" required autocomplete="new-password">
+                            <span class="checkmark">✓</span>
+                            <span class="password-toggle" onclick="togglePassword()" aria-label="Show password" role="button" tabindex="0">
+                                <i class="fa fa-eye"></i>
+                            </span>
+                            <div id="repeat_password-error" class="error-field-text"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- phone -->
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                        <input type="hidden" id="full_phone" name="full_phone">
+                        <div id="phone-error" class="error-field-text"></div>
+                    </div>
+    
+                    <div id="message">
+                    </div>
+    
+                    <button type="submit" class="submit-button">Create Account</button>
+    
+                </form>
+            </div>
+        </div>
+    </main>
+
+     <footer>
+        <div class="footer-data width-container">
+                <div class="footer-contactData">
+                    
+                    <p>
+                    <a href="https://www.gabywaisman.com/" target="_blank">
+                    <span style="color: #FFF; line-height: 1.5; font-weight: bold;">Gabriela Waisman</span><br>Software and Web Developer
+                    </a>
+                    </p>
+                    <p>                        
+                        <a href="mailto:developer@gabywaisman.com" target="_blank">
+                            <i class="fa fa-envelope-o"></i>developer@gabywaisman.com</a>
+                    </p>
+                </div>
+                <div>
+                    <ul class="header-top-socialNetworks">
+                        <li><a href="https://www.linkedin.com/in/gabriela-waisman/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://github.com/Wisegirlie" target="_blank"><i class="fa fa-github"></i></a></li>
+                        <li><a href="https://www.gabywaisman.com/" target="_blank"><i class="fa fa-link"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+    </footer>
+
+</body>
+
+<!-- --------------------- SCRIPTS ----------------------- -->
+<script src="./js/accountType.js"></script> 
+<script src="./js/togglePassword.js"></script> 
+<script src="./libraries/inttl-tel-input/js/intlTelInput.js"></script>
+<script src="./libraries/phoneNumberField.js"></script>
+<script src="./js/formValidation.js"></script>
+<script src="./js/submitForm.js"></script> 
+	
+</html>
