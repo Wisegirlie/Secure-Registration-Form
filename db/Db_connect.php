@@ -54,7 +54,7 @@
             $this->user = getenv('DB_USER');
             $this->pass = getenv('DB_PASS');
             $this->dbname = getenv('DB_NAME');
-            $this->port = (int) getenv('DB_PORT');             
+            $this->port = (int) getenv('DB_PORT'); 
         }
 
         public function connect(string $dbname = '') : PDO {
@@ -69,22 +69,14 @@
                 return $conn; 
             } catch (PDOException $e) {
                 http_response_code(503); // Service Unavailable
+                error_log("Cannot access database: " . $e->getMessage());           
                 header('Content-Type: application/json');
                 
                 echo json_encode([
                     "success" => false,
                     "error" => "Service temporarily unavailable. Please try again later."
                 ]);
-
-                // *************  ONLY FOR DEBUGGING *****************
-                // echo json_encode([
-                //     "success" => false,
-                //     "error" => "Database connection failed: " . $e->getMessage()
-                // ]);
-                // *************************************************** 
-
-
-                error_log("Database connection error: " . $e->getMessage());                
+                    
                 exit;
             }
         }

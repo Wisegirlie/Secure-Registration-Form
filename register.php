@@ -131,7 +131,7 @@
                 $response['errors']['general'] = "This user already exists";
             }
         } catch (PDOException $e) {
-            $response['errors']['general'] = "System unavailable - Please try again later / Error accessing the Database";
+            $response['errors']['general'] = "System unavailable - Please try again later";
         }
             
         //  Validate Phone Number

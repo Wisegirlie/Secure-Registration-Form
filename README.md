@@ -12,6 +12,7 @@ A security-focused user registration system built with **PHP**, **MySQL**, **HTM
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black) 
 
 
+
 ## ✨ Features
 
 - User-friendly registration form
@@ -26,6 +27,7 @@ A security-focused user registration system built with **PHP**, **MySQL**, **HTM
 - Pasword hashing and SQL injection prevention
 - Modular code (easy to extend)
 - Ready for deployment or extension
+
 
 
 ## 📋 Requirements
@@ -52,14 +54,17 @@ A security-focused user registration system built with **PHP**, **MySQL**, **HTM
 5. Deploy to a PHP-enabled server with a configured database.
 
 
+
 ### 🛡️ Security Notes
 
 Always use HTTPS in production.
 
 
+
 ## 📸 Screenshots
 
 ![Preview](/images/screenshot-01-resize.jpg)
+
 
 
 ## 🤝 Contributing
@@ -74,6 +79,7 @@ Fork the repository.
 If you have suggestions, bug fixes, unit tests, or improvements, feel free to open an issue or submit a pull request.
 
 
+
 ## 🔥 Contribution Ideas, Customizations and Additions
 
 - Integrate Google reCAPTCHA or similar tools for enhanced bot protection.
@@ -84,6 +90,7 @@ If you have suggestions, bug fixes, unit tests, or improvements, feel free to op
 - Improve frontend UX (animations, design).
 - Improve form validation messages (frontend/backend)
 - Write unit tests for PHP functions
+
 
 
 **Enjoy!**
