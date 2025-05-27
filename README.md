@@ -95,12 +95,9 @@ If you have suggestions, bug fixes, unit tests, or improvements, feel free to op
 
 ## Live Demo 
 
-You can try the form in the following link:
+You can try the form at the following link:
 
-[Live Demo](https://gabywaisman.com/portfolio/secure-registration-form/index.html){:target="_blank" rel="noopener"}
-
-
-<a href="https://gabywaisman.com/portfolio/secure-registration-form/index.html" target="_blank" rel="noopener">Live Demo</a>
+<a href="https://gabywaisman.com/portfolio/secure-registration-form/index.html" target="_blank">Live Demo</a>
 
 
 **Enjoy!**
